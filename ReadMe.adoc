@@ -4,20 +4,26 @@
 :Revision: version#
 :License: Public Domain
 
-= Project: {Project}
+= Project: Plant Analysis with Internet of Things
 
-Describe your project
+The goal of this IoT project is to develop a smart system that can monitor and analyze several environmental parameters, such as temperature, humidity, pH, and water temperature in real-time. This system will use an ESP32 microcontroller and an Arduino Cloud service to collect and store the data.
 
-== Step 1: Installation
-Please describe the steps to install this project.
 
-For example:
+== Hardware Components:
 
-1. Open this file
-2. Edit as you like
-3. Release to the World!
+ESP32 Development Board
+Sensors for Temperature(DHT11), Humidity, pH, and Probe Sensor
+Breadboard and Jumper Wires
+Resistors and Capacitors (if needed)
+Power Supply (USB cable or battery)
 
-== Step 2: Assemble the circuit
+
+
+== Software Components:
+
+Arduino IDE (Integrated Development Environment)
+Arduino Cloud Platform
+WiFi Network
 
 Assemble the circuit following the diagram layout.png attached to the sketch
 
@@ -31,28 +37,17 @@ Upload the code contained in this sketch on to your board
  sketch123                => Arduino sketch folder
   ├── sketch123.ino       => main Arduino file
   ├── schematics.png      => (optional) an image of the required schematics
-  ├── layout.png          => (optional) an image of the layout
   └── ReadMe.adoc         => this file
 ....
 
-=== License
-This project is released under a {License} License.
+== Working Principle:
+The ESP32 microcontroller will be connected to each of the sensors for temperature, humidity, pH, and water temperature. The ESP32 will read the data from each sensor and send it to the Arduino Cloud service using WiFi connectivity.
 
-=== Contributing
-To contribute to this project please contact: 
+The Arduino Cloud service will store the data and display it on a dashboard, which can be accessed using a web browser or a mobile app. The dashboard will show the current values of each parameter and provide historical data over time.
 
-=== BOM
-Add the bill of the materials you need for this project.
-
-|===
-| ID | Part name      | Part number | Quantity
-| R1 | 10k Resistor   | 1234-abcd   | 10       
-| L1 | Red LED        | 2345-asdf   | 5        
-| A1 | Arduino Zero   | ABX00066    | 1        
-|===
+Additionally, the system will send notifications to the user if the readings go outside of a predefined range, indicating that the environment needs attention. For example, if the pH level of water becomes too acidic, the system will notify the user to take action to correct the pH level.
 
 
-=== Help
-This document is written in the _AsciiDoc_ format, a markup language to describe documents. 
-If you need help you can search the http://www.methods.co.nz/asciidoc[AsciiDoc homepage]
-or consult the http://powerman.name/doc/asciidoc[AsciiDoc cheatsheet]
+
+== Conclusion 
+This IoT project will help to monitor and analyze important environmental parameters in real-time, providing a valuable tool for agriculture, aquaculture, and other industries where precise control of environmental conditions is necessary. With the help of Arduino Cloud and ESP32 microcontroller, it is possible to collect, store and analyze environmental data at a low cost and with minimal setup.
